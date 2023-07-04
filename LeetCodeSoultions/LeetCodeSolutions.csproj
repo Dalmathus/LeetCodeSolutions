@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CSharpSolutions\CSharpSolutions.csproj" />
+    <ProjectReference Include="..\LeetCodeTests\LeetCodeTests.csproj" />
   </ItemGroup>
 
 </Project>

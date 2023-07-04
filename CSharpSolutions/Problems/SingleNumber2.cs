@@ -40,6 +40,15 @@ namespace CSharpSolutions.Problems
             // ToList() turns it into a list, easy index retrieval later
             var countList = nums.GroupBy(x => x).Where(g => g.Count() == 1).ToList();
             return countList[0].Key;
+
+
+            // Solution results at submit time
+
+            // 50.96% for runtime
+            // 7.64% for memory - 41.2mb used, best case was 39.2mb
+
+            // The solution could be improved by changing to a byte checking solution but I think the above is easy to read, understand and the difference is neglible (2mb)
+            // The ideal solution is only for leetcode not for industry
         }
 
     }
