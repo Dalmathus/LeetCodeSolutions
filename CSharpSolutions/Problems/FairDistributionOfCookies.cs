@@ -18,34 +18,40 @@ namespace CSharpSolutions.Problems
     /// 2 <= k <= cookies.length
     /// </summary>
     public class FairDistributionOfCookies : Solution
-    {
+    {     
         public static int DistributeCookies(int[] cookies, int k)
-        {
-
-            // In order to complete this a back tracking algorithm should be used to get the set of sets from cookies
-
-            List<List<int>> subsets = new List<List<int>>();
+        {            
             List<int> input = cookies.ToList();
+            List<int> children = new List<int>();
 
-            FindSubsets(subsets, input, new List<int>(), 0);
-
-            return 0;
-
-        }
-
-        public static void FindSubsets(List<List<int>> subsets, List<int> nums, List<int> output, int index) {
-            
-            if (index == nums.Count)
+            for (int i = 0; i < k; i++)
             {
-                subsets.Add(output);
-                return;
+                children.Add(0);
             }
 
-            // This call if proceeding down the tree without the current index value
-            FindSubsets(subsets, nums, new List<int>(output), index + 1);
-            output.Add(nums[index]);
-            // This call is proceeding down the tree with the current index value
-            FindSubsets(subsets, nums, new List<int>(output), index + 1);
+            int test = BacktrackCookies(input, children, 0);
+
+            return test;
+        }
+
+        public static int BacktrackCookies(List<int> input, List<int> children, int index) {
+            
+            // If we are at the bottom of the tree bail out
+            if (index == input.Count)
+            {
+                return children.Max();
+            }
+
+            int result = int.MaxValue;
+
+            for (int i = 0; i < children.Count; i++)
+            {                  
+                children[i] += input[index];
+                result = Math.Min(result, BacktrackCookies(input, children, index + 1));
+                children[i] -= input[index];
+            }
+
+            return result;
         }
     }
 }
