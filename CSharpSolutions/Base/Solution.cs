@@ -8,5 +8,6 @@ namespace CSharpSolutions.Base
 {
     public class Solution
     {
+        protected int _result;
     }
 }
