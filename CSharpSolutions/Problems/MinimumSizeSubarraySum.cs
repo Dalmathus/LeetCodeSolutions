@@ -26,10 +26,6 @@ namespace CSharpSolutions.Problems
 
         public static void BuildSubset(List<List<int>> subset, int target, List<int> output, List<int> nums, int index)
         {
-            if (subset.Count > 0 && subset.Min(x => x.Count) < output.Count)
-            {
-                return;
-            }
 
             if (output.Sum() >= target)
             {
