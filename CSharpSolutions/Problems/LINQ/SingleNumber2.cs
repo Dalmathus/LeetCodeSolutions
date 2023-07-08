@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpSolutions.Problems
+namespace CSharpSolutions.Problems.LINQ
 {
     public class SingleNumber2 : Solution
     {
