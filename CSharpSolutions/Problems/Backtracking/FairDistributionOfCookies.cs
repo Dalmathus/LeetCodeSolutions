@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpSolutions.Problems
+namespace CSharpSolutions.Problems.Backtracking
 {
     /// <summary>
     /// You are given an integer array cookies, where cookies[i] denotes the number of cookies in the ith bag. You are also given an integer k that denotes the number of children to distribute all the bags of cookies to. All the cookies in the same bag must go to the same child and cannot be split up.
@@ -18,9 +18,9 @@ namespace CSharpSolutions.Problems
     /// 2 <= k <= cookies.length
     /// </summary>
     public class FairDistributionOfCookies : Solution
-    {     
+    {
         public static int DistributeCookies(int[] cookies, int k)
-        {            
+        {
             List<int> input = cookies.ToList();
             List<int> children = new List<int>();
 
@@ -34,8 +34,9 @@ namespace CSharpSolutions.Problems
             return test;
         }
 
-        public static int BacktrackCookies(List<int> input, List<int> children, int index) {
-            
+        public static int BacktrackCookies(List<int> input, List<int> children, int index)
+        {
+
             // If we are at the bottom of the tree bail out
             if (index == input.Count)
             {
@@ -45,7 +46,7 @@ namespace CSharpSolutions.Problems
             int result = int.MaxValue;
 
             for (int i = 0; i < children.Count; i++)
-            {                  
+            {
                 children[i] += input[index];
                 result = Math.Min(result, BacktrackCookies(input, children, index + 1));
                 children[i] -= input[index];

@@ -1,6 +1,6 @@
-using CSharpSolutions.Problems;
+using CSharpSolutions.Problems.LINQ;
 
-namespace LeetCodeTests
+namespace LeetCodeTests.LINQ
 {
     [TestClass]
     public class SingleNumber2Tests

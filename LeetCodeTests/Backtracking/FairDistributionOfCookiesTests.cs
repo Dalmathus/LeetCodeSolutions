@@ -1,11 +1,11 @@
-﻿using CSharpSolutions.Problems;
+﻿using CSharpSolutions.Problems.Backtracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCodeTests
+namespace LeetCodeTests.Backtracking
 {
     [TestClass]
     public class FairDistributionOfCookiesTests

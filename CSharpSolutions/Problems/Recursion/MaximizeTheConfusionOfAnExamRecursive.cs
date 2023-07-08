@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpSolutions.Problems
+namespace CSharpSolutions.Problems.Recursive
 {
     public class MaximizeTheConfusionOfAnExamRecursive
     {
