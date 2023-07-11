@@ -11,7 +11,6 @@ namespace CSharpSolutions.Problems.BFS
         public IList<int> DistanceK(TreeNode root, TreeNode target, int k)
         {
             List<int> result = new List<int>();
-            bool searching = true;
 
             Dictionary<TreeNode, List<TreeNode>> graph = new Dictionary<TreeNode, List<TreeNode>>();
 
