@@ -20,7 +20,20 @@ namespace LeetCodeTests.Recursion
 
             int result = prob.MinCostClimbingStairsProblem(input);
 
-            Assert.AreEqual(25, result);
+            Assert.AreEqual(15, result);
+        }
+
+        [TestMethod]
+        public void Example2()
+        {
+
+            MinCostClimbingStairs prob = new MinCostClimbingStairs();
+
+            int[] input = new int[] { 0, 2, 2, 1 };
+
+            int result = prob.MinCostClimbingStairsProblem(input);
+
+            Assert.AreEqual(2, result);
         }
 
     }
