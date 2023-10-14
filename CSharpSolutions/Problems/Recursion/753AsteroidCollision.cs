@@ -17,9 +17,7 @@ namespace CSharpSolutions.Problems.Recursion
         {
 
             // If I have 0 or 1 asteroids
-            // If I have only left asteroids
-            // If I have only right asteroids -- might retire this for the check collision
-            if (asteroids.Count <= 1 || asteroids.Count(x => x > 0) == 0 || asteroids.Count(x => x < 0) == 0)
+            if (asteroids.Count <= 1)
             {
                 return asteroids;
             }
@@ -47,6 +45,7 @@ namespace CSharpSolutions.Problems.Recursion
 
                     asteroids.RemoveRange(i, 2);
                     i = i - 2;
+                    if (i < 0) i = 0;
                 }
             }
 
